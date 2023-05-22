@@ -16,7 +16,7 @@ class EncoderCNN(nn.Module):
 
     def forward(self, images):
         features = self.inception(images)
-        features = features.logits
+        # features = features.logits
         features = self.dropout(self.relu(features))
         return features
 
